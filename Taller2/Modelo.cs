@@ -11,6 +11,7 @@ namespace Taller2
         private int numModelo;
         private int numPreguntas;
         private string respuesta;
+        private static Random random = new Random();
 
         public Modelo(int numModelo, string respuesta)
         {
@@ -22,14 +23,14 @@ namespace Taller2
         {
             this.numModelo = numModelo;
             this.numPreguntas = numPreguntas;
-            this.respuesta = generarRespuestaCorrecta();
+            generarRespuestaCorrecta();
         }
 
         public Modelo(int numModelo)
         {
             this.numModelo = numModelo;
             this.numPreguntas = generarNumPreguntas();
-            this.respuesta = generarRespuestaCorrecta();
+            generarRespuestaCorrecta();
         }
 
         public int generarNumPreguntas()
@@ -40,16 +41,14 @@ namespace Taller2
             return preguntas;
         }
 
-        public string generarRespuestaCorrecta()
+        public void generarRespuestaCorrecta()
         {
-            string respuestaCorrecta = "";
-            Random random = new Random();
+            
             string[] opciones = {"a", "b", "c", "d"};
                 for (int i = 0; i < numPreguntas; i++)
                 {
-                    respuestaCorrecta += opciones[random.Next(4)];
+                    this.respuesta += opciones[random.Next(4)];
                 }
-            return respuestaCorrecta;
       
         }
 

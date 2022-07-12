@@ -48,7 +48,11 @@ namespace Taller2
 
             SimTest simtest = new SimTest(test);
             test.contarModelos();
-            simtest.simula(5);
+
+            Console.WriteLine("Ingrese el n° de alumnos para simular");
+            int opcion = Int32.Parse(Console.ReadLine());
+
+            simtest.simula(opcion);
             simtest.imprimirAlumnos();
             simtest.listado();
 

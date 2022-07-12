@@ -11,6 +11,7 @@ namespace Taller2
         private List<Alumno> alumnos;
         private Test test;
         private List<Modelo> modelos;
+        private static Random random = new Random();
         public SimTest(Test test)
         {
             this.alumnos = new List<Alumno>();
@@ -75,7 +76,6 @@ namespace Taller2
         public string generarRespuesta(Modelo m)
         {
             string respuesta = "";
-            Random random = new Random();
             string[] opciones = { "a", "b", "c", "d", " "};
             for (int i = 0; i < m.getNumPreguntas(); i++)
             {

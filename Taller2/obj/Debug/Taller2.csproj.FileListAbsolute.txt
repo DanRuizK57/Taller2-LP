@@ -6,3 +6,11 @@ D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Ta
 D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2\Taller2\bin\Debug\Taller2.pdb
 D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2\Taller2\obj\Debug\Taller2.exe
 D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2\Taller2\obj\Debug\Taller2.pdb
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\bin\Debug\Taller2.exe.config
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\bin\Debug\Taller2.exe
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\bin\Debug\Taller2.pdb
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\obj\Debug\Taller2.csproj.AssemblyReference.cache
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\obj\Debug\Taller2.csproj.SuggestedBindingRedirects.cache
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\obj\Debug\Taller2.csproj.CoreCompileInputs.cache
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\obj\Debug\Taller2.exe
+D:\Ing Informática\3er Semestre 2022\Lenguajes de Programación\Práctica\C#\Taller2-LP\Taller2\obj\Debug\Taller2.pdb
