@@ -40,11 +40,11 @@ namespace Taller2
 
 
 
-            int puntos = test.corrigeModelo(1, "a bcad");
+            /*int puntos = test.corrigeModelo(1, "a bcad");
             Console.WriteLine("Puntos: " + puntos);
 
             Alumno a1 = new Alumno("Juan",1,"cadbcb");
-            Console.WriteLine("Puntos a1: " + a1.corrige(test) + "\n");
+            Console.WriteLine("Puntos a1: " + a1.corrige(test) + "\n");*/
 
             SimTest simtest = new SimTest(test);
             test.contarModelos();
@@ -55,6 +55,9 @@ namespace Taller2
             simtest.simula(opcion);
             simtest.imprimirAlumnos();
             simtest.listado();
+
+            ListaTest lt = new ListaTest();
+            lt.escribirArchivo();
 
             Console.ReadLine();
 

@@ -9,8 +9,32 @@ namespace Taller2
 {
     class ListaTest
     {
-        StreamReader streamReader = new StreamReader("");
+        public TextReader leer;
+        public TextWriter escribir;
 
+        public ListaTest()
+        {
+            this.leer = new StreamReader(@"..\..\..\entrada_datos.txt");
+            this.escribir = File.AppendText(@"..\..\..\salida_datos.txt");
+        }
+
+        public void leerArchivo()
+        {
+            List<string> palabras = new List<string>();
+            foreach (string line in System.IO.File.ReadLines(@"..\..\..\entrada_datos.txt"))
+            {
+                palabras.Add(line);
+                System.Console.WriteLine(line);
+            }
+        }
+
+        public void escribirArchivo()
+        {
+            
+
+            escribir.WriteLine("Nombre Alumno             Puntos");
+            escribir.Close();
+        }
 
     }
 }

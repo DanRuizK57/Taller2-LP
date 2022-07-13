@@ -35,7 +35,7 @@ namespace Taller2
         {
             int puntos = 0;
 
-            Modelo pautaModelo = reconocerModelo(num_modelo, respuesta_modelo);
+            Modelo pautaModelo = reconocerModelo(num_modelo);
 
             char[] respuestasPauta = pautaModelo.getRespuesta().ToCharArray();
             char[] respuestasContestadas = respuesta_modelo.ToCharArray();
@@ -59,13 +59,13 @@ namespace Taller2
 
         }
 
-        public Modelo reconocerModelo(int num_modelo, string respuesta_modelo)
+        public Modelo reconocerModelo(int num_modelo)
         {
-            for (int i = 0; i < modelos.Count; i++)
+            for (int i = 0; i < this.modelos.Count(); i++)
             {
-                if (num_modelo == modelos[i].getNumModelo())
+                if (num_modelo == this.modelos[i].getNumModelo())
                 {
-                    return modelos[i];
+                    return this.modelos[i];
                 }
                
             }

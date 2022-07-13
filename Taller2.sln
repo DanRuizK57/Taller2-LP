@@ -5,6 +5,12 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller2", "Taller2\Taller2.csproj", "{E18D4703-201C-463D-B4FF-B658CCF698B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{47CA2AC2-0BA0-452A-9F69-1637F7C54559}"
+	ProjectSection(SolutionItems) = preProject
+		entrada_datos.txt = entrada_datos.txt
+		salida_datos.txt = salida_datos.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
