@@ -18,46 +18,26 @@ namespace Taller2
                 modelos.Add(new Modelo(i+1));
             }
 
-            /*Modelo m1 = new Modelo(1,6);
-            Console.WriteLine(m1.ToString());
-
-            Modelo m2 = new Modelo(2,6);
-            Console.WriteLine(m2.ToString());
-
-            Modelo m3 = new Modelo(3,6);
-            Console.WriteLine(m3.ToString());
-
-            Modelo m4 = new Modelo(4,6);
-            Console.WriteLine(m4.ToString());*/
-
             Test test = new Test();
-            /*test.agregarModelo(m1);
-            test.agregarModelo(m2);
-            test.agregarModelo(m3);
-            test.agregarModelo(m4); */
-            test.agregarModelos(modelos);
-            foreach (Modelo modelo in modelos) {Console.WriteLine(modelo.ToString());}
 
-
-
-            /*int puntos = test.corrigeModelo(1, "a bcad");
-            Console.WriteLine("Puntos: " + puntos);
-
-            Alumno a1 = new Alumno("Juan",1,"cadbcb");
-            Console.WriteLine("Puntos a1: " + a1.corrige(test) + "\n");*/
+            test.AgregarModelos(modelos);
+            foreach (Modelo modelo in modelos) 
+                Console.WriteLine(modelo.ToString());
 
             SimTest simtest = new SimTest(test);
-            test.contarModelos();
+            test.ContarModelos();
 
             Console.WriteLine("Ingrese el n° de alumnos para simular");
             int opcion = Int32.Parse(Console.ReadLine());
 
-            simtest.simula(opcion);
-            simtest.imprimirAlumnos();
-            simtest.listado();
+            simtest.Simula(opcion);
+            simtest.ImprimirAlumnos();
+            simtest.Listado();
 
             ListaTest lt = new ListaTest();
-            lt.escribirArchivo();
+            lt.LeerArchivo();
+            lt.SimularArchivo();
+            lt.EscribirArchivo();
 
             Console.ReadLine();
 

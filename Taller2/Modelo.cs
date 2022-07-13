@@ -23,17 +23,17 @@ namespace Taller2
         {
             this.numModelo = numModelo;
             this.numPreguntas = numPreguntas;
-            generarRespuestaCorrecta();
+            GenerarRespuestaCorrecta();
         }
 
         public Modelo(int numModelo)
         {
             this.numModelo = numModelo;
-            this.numPreguntas = generarNumPreguntas();
-            generarRespuestaCorrecta();
+            this.numPreguntas = GenerarNumPreguntas();
+            GenerarRespuestaCorrecta();
         }
 
-        public int generarNumPreguntas()
+        public int GenerarNumPreguntas()
         {
             int preguntas = 0;
             Random rand = new Random();
@@ -41,13 +41,13 @@ namespace Taller2
             return preguntas;
         }
 
-        public void generarRespuestaCorrecta()
+        public void GenerarRespuestaCorrecta()
         {
             
             string[] opciones = {"a", "b", "c", "d"};
                 for (int i = 0; i < numPreguntas; i++)
                 {
-                    this.respuesta += opciones[random.Next(4)];
+                    this.respuesta += opciones[random.Next(4)].ToLower();
                 }
       
         }
@@ -59,17 +59,17 @@ namespace Taller2
                 + "Respuesta: " + respuesta + "\n";
         }
 
-        public int getNumModelo()
+        public int GetNumModelo()
         {
             return numModelo;
         }
 
-        public int getNumPreguntas()
+        public int GetNumPreguntas()
         {
             return numPreguntas;
         }
 
-        public string getRespuesta()
+        public string GetRespuesta()
         {
             return respuesta;
         }

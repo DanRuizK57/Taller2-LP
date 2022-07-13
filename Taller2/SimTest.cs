@@ -16,10 +16,10 @@ namespace Taller2
         {
             this.alumnos = new List<Alumno>();
             this.test = test;
-            this.modelos = test.getModelos();
+            this.modelos = test.GetModelos();
         }
 
-        public void simula(int numAlumnos)
+        public void Simula(int numAlumnos)
         {
             Random rand = new Random();
             int modeloElegido = 0;
@@ -29,19 +29,19 @@ namespace Taller2
             for (int i = 0; i < numAlumnos; i++)
             {
                 modeloElegido = rand.Next(1, modelos.Count());
-                m = seleccionarModelo(modeloElegido);
-                respuesta = generarRespuesta(m);
+                m = SeleccionarModelo(modeloElegido);
+                respuesta = GenerarRespuesta(m);
 
-                alumnos.Add(new Alumno(generarNombre(i+1), modeloElegido, respuesta));
+                alumnos.Add(new Alumno(GenerarNombre(i+1), modeloElegido, respuesta));
             }
         }
 
-        public void listado()
+        public void Listado()
         {
             List<int> puntuaciones = new List<int>();
             for (int i = 0; i < alumnos.Count(); i++)
             {
-                puntuaciones.Add(alumnos[i].corrige(test));
+                puntuaciones.Add(alumnos[i].Corrige(test));
             }
             var contador = new List<Tuple<int, int>>();
             bool encontro;
@@ -62,33 +62,34 @@ namespace Taller2
 
             }
             Console.WriteLine("Puntuaciones    Num. Alumnos");
+            contador.Sort();
             for (int i = 0; i < contador.Count; i++) { 
                 Console.WriteLine("      " + contador[i].Item1 + "               " + contador[i].Item2);
             }
         }
 
-        public string generarNombre(int numAlumno)
+        public string GenerarNombre(int numAlumno)
         {
             string nombre = "NOMBRE" + numAlumno;
             return nombre;
         }
 
-        public string generarRespuesta(Modelo m)
+        public string GenerarRespuesta(Modelo m)
         {
             string respuesta = "";
             string[] opciones = { "a", "b", "c", "d", " "};
-            for (int i = 0; i < m.getNumPreguntas(); i++)
+            for (int i = 0; i < m.GetNumPreguntas(); i++)
             {
                 respuesta += opciones[random.Next(5)];
             }
             return respuesta;
         }
 
-        public Modelo seleccionarModelo(int numModeloElegido)
+        public Modelo SeleccionarModelo(int numModeloElegido)
         {
             for (int i = 0; i < modelos.Count(); i++)
             {
-                if (modelos[i].getNumModelo() == numModeloElegido)
+                if (modelos[i].GetNumModelo() == numModeloElegido)
                 {
                     return modelos[i];
                 }
@@ -96,7 +97,7 @@ namespace Taller2
             return null;
         }
 
-        public void imprimirAlumnos()
+        public void ImprimirAlumnos()
         {
             foreach (Alumno a in alumnos) { Console.WriteLine(a.ToString()); }
         }

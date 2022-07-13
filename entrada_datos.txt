@@ -7,5 +7,5 @@ BBBAAACCCDDD
 CDCDACACBBAA 
 AABBAACCAADD
 2:BB ABAC CDDD:López Hermoso, Juan
-1: ACD BCD:García García, Andrés
+1: ACD BCD    :García García, Andrés
 3:CDCDACACBBAA:Romero López, Luisa

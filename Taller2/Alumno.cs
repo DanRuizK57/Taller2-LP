@@ -19,9 +19,9 @@ namespace Taller2
             this.respuesta = respuesta;
         }
 
-        public int corrige(Test test)
+        public int Corrige(Test test)
         {
-           return test.corrigeModelo(this.numModelo, this.respuesta);
+           return test.corrigeModelo(numModelo, respuesta);
         }
 
         public override string ToString()

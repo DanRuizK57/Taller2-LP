@@ -16,17 +16,17 @@ namespace Taller2
             this.cantidadModelos = 0;
         }
 
-        public void agregarModelo(Modelo m)
+        public void AgregarModelo(Modelo m)
         {
             modelos.Add(m);
         }
 
-        public void agregarModelos(List<Modelo> m)
+        public void AgregarModelos(List<Modelo> m)
         {
             this.modelos = m;
         }
 
-        public void contarModelos()
+        public void ContarModelos()
         {
             this.cantidadModelos = modelos.Count();
         }
@@ -35,12 +35,12 @@ namespace Taller2
         {
             int puntos = 0;
 
-            Modelo pautaModelo = reconocerModelo(num_modelo);
+            Modelo pautaModelo = ReconocerModelo(num_modelo);
 
-            char[] respuestasPauta = pautaModelo.getRespuesta().ToCharArray();
+            char[] respuestasPauta = pautaModelo.GetRespuesta().ToCharArray();
             char[] respuestasContestadas = respuesta_modelo.ToCharArray();
 
-            for (int i = 0; i < pautaModelo.getNumPreguntas(); i++)
+            for (int i = 0; i < pautaModelo.GetNumPreguntas(); i++)
             {
                     if (respuestasPauta[i] == respuestasContestadas[i])
                     {
@@ -59,26 +59,25 @@ namespace Taller2
 
         }
 
-        public Modelo reconocerModelo(int num_modelo)
+        public Modelo ReconocerModelo(int num_modelo)
         {
-            for (int i = 0; i < this.modelos.Count(); i++)
+            for (int i = 0; i < modelos.Count(); i++)
             {
-                if (num_modelo == this.modelos[i].getNumModelo())
+                if (num_modelo == modelos[i].GetNumModelo())
                 {
-                    return this.modelos[i];
+                    return modelos[i];
                 }
                
             }
             return null;
-            
         }
 
-        public int getCantidadModelos()
+        public int GetCantidadModelos()
         {
             return cantidadModelos;
         }
 
-        public List<Modelo> getModelos()
+        public List<Modelo> GetModelos()
         {
             return modelos;
         }
